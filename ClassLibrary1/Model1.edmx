@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ClimateFarmPriceLiveModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Rainfall_Live">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Year_ref" Type="int" />
+          <Property Name="Rain_Full_Year" Type="int" />
+          <Property Name="Outflow_Full_Year" Type="int" />
+          <Property Name="Rain_Winter" Type="int" />
+          <Property Name="Outflow_Winter" Type="int" />
+          <Property Name="Rain_Summer" Type="int" />
+          <Property Name="Outflow_Summer" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ClimateFarmPriceLiveModelStoreContainer">
+          <EntitySet Name="Rainfall_Live" EntityType="Self.Rainfall_Live" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClimateFarmPriceLiveModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Rainfall_Live">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year_ref" Type="Int32" />
+          <Property Name="Rain_Full_Year" Type="Int32" />
+          <Property Name="Outflow_Full_Year" Type="Int32" />
+          <Property Name="Rain_Winter" Type="Int32" />
+          <Property Name="Outflow_Winter" Type="Int32" />
+          <Property Name="Rain_Summer" Type="Int32" />
+          <Property Name="Outflow_Summer" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ClimateFarmPriceLiveEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Rainfall_Live" EntityType="Self.Rainfall_Live" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClimateFarmPriceLiveModelStoreContainer" CdmEntityContainer="ClimateFarmPriceLiveEntities">
+          <EntitySetMapping Name="Rainfall_Live">
+            <EntityTypeMapping TypeName="ClimateFarmPriceLiveModel.Rainfall_Live">
+              <MappingFragment StoreEntitySet="Rainfall_Live">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Year_ref" ColumnName="Year_ref" />
+                <ScalarProperty Name="Rain_Full_Year" ColumnName="Rain_Full_Year" />
+                <ScalarProperty Name="Outflow_Full_Year" ColumnName="Outflow_Full_Year" />
+                <ScalarProperty Name="Rain_Winter" ColumnName="Rain_Winter" />
+                <ScalarProperty Name="Outflow_Winter" ColumnName="Outflow_Winter" />
+                <ScalarProperty Name="Rain_Summer" ColumnName="Rain_Summer" />
+                <ScalarProperty Name="Outflow_Summer" ColumnName="Outflow_Summer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
